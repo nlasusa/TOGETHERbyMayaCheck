@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOGETHER</title>
+
+ <!-- Google Font -->
+ <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+ <!-- Data AOS -->
+ <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+ <!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<!-- JQUERY-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+
+<style type="text/css">
+#page-title {
+    font-size: 50px; 
+    /* margin-top: 40px;  */
+    padding: 10px; 
+    letter-spacing: 15px; 
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    text-align: center; 
+    background-color: rgb(255, 255, 255); 
+    color: black;
+}
+#page-subtitle {
+    font-size: 14px; 
+    letter-spacing: 2px; 
+    margin-top: 10px; 
+    color: rgb(142, 0, 224); 
+}
+#page-subtitle2 {
+    font-size: 16px; 
+    font-weight: 300;
+    letter-spacing: 9px; 
+    color: rgb(218, 132, 20); 
+}
+
+.play-game {
+    font-size: 30px; 
+    margin-top: 5px; 
+    padding: 10px; 
+    letter-spacing: 5px; 
+    font-family: 'Raleway', sans-serif;
+    background-color: rgb(255, 0, 221);
+    font-weight: 300;
+    text-align: center; 
+    color: white; 
+    width: 50%; 
+    margin: 0 auto; 
+}
+
+.play-game:hover {
+  background-color: rgb(199, 4, 173);
+  cursor: pointer; 
+}
+
+.rules-reg {
+    font-size: 17px; 
+    margin-top: 5px; 
+    padding: 10px; 
+    letter-spacing: 5px; 
+    font-family: 'Raleway', sans-serif;
+    background-color: rgb(255, 0, 221);
+    font-weight: 300;
+    text-align: center; 
+    color: white;
+    width: 50%; 
+    margin: 0 auto; 
+}
+
+.rules-reg:hover {
+  background-color: rgb(199, 4, 173);
+  cursor: pointer; 
+}
+
+
+.container-newsletter {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.newsletter {
+  margin: 10px;
+  margin-top: 40px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  font-size: 16px; 
+  letter-spacing: 1px; 
+}
+
+span {
+    /* margin: 10px; */
+    text-align: center;
+}
+  
+button {
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 6px 10px;
+    background-color: rgb(173, 202, 5); 
+}
+
+button:hover {
+    background-color: rgb(158, 185, 3); 
+}
+
+footer {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  font-size: 15px; 
+  letter-spacing: 1px; 
+  text-align: center; 
+  padding: 25px; 
+  background-color: black; 
+  color: white; 
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-color: rgba(0,0,0,0.2)
+}
+
+.container-users {
+  border: 1px solid black; 
+  margin: 0 auto; 
+  padding: 40px; 
+  width: 60%; 
+}
+
+.user-posts {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px; 
+    font-size: 19px; 
+    text-align: center; 
+}
+
+#user-boards1, #user-boards2, #user-boards3, #user-boards4, #user-boards5 {
+    color:rgb(0, 120, 240);
+    font-weight: 500;
+}
+
+#user-sn {
+  color: rgb(218, 132, 20); 
+  font-weight: 500;
+}
+
+#user-signup, #user-signin {
+  color:rgb(0, 120, 240)
+}
+
+#user-signup:hover, #user-signin:hover,  #user-boards1:hover, #user-boards2:hover, #user-boards3:hover,#user-boards4:hover, #user-boards5:hover {
+  cursor: pointer;
+}
+
+.user-maya {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px; 
+    font-size: 14px; 
+    margin-top: 10px; 
+}
+.center {
+    margin: auto;
+    width: 100%;
+    padding: 20px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px; 
+    margin-top: 10px; 
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.hideform {
+    display: none;
+}
+
+#close {
+    background-color: white;
+    color: black; 
+    margin-top: -10px;
+}
+
+#submit {
+    background-color: rgb(0, 120, 240);
+    border: none;
+    color: white;
+    width: 100%;
+    border-radius: 1%;
+}
+
+input {
+    width: 100%; 
+}
+
+/*DONATION Headings & text*/
+#container-donation {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    margin-top: 50px; 
+}
+.org-txt {
+  color: rgb(218, 132, 20); 
+  font-family: 'Raleway', sans-serif;
+}
+
+#foundation-link {
+    color: rgb(0, 120, 240);
+}
+.blue-txt {
+  color: rgb(0, 120, 240);
+  margin-top: 10px;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+#inprogress {
+  font-weight: 600;
+  font-family: 'Raleway', sans-serif;
+}
+/*Headings & text end*/
+
+
+/*Buttons*/
+.green-btn,
+.green-btn:hover,
+.green-btn:focus {
+  background: rgb(173, 202, 5); 
+	border-radius: 3px;
+	color: #fff;
+	font-size: 20px;
+	padding: 11px;
+	width: 100%;
+  outline: none !important;
+  font-family: 'Raleway', sans-serif;
+font-weight: 300;
+  box-shadow: 0px 5px 2px -4px gainsboro;
+}
+.green-btn:focus:active {
+  box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+  color: #fff;
+}
+
+.grey-btn,
+.grey-btn:hover {
+  background: #fafafa;
+	border-radius: 3px;
+	border: solid 1px #dcdcdc;
+	color: #777 !important;
+	font-size: 17px;
+	padding: 10px;
+	width: 100%;
+	outline: none !important;
+	font-weight: 600;
+    font-family: 'Raleway', sans-serif;
+    box-shadow: 0px 5px 2px -4px gainsboro;
+}
+.grey-btn:focus:active {
+  box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+  color: #777;
+}
+
+.tw-btn,
+.tw-btn:hover {
+	background: #2196F3;
+	border-radius: 3px;
+	color: #fff !important;
+	font-size: 17px;
+	padding: 10px;
+	width: 100%;
+	outline: none !important;
+	font-family: 'Nunito', sans-serif;
+	font-weight: 700;
+	box-shadow: 0px 5px 2px -4px gainsboro;
+}
+.tw-btn:focus:active {
+  box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+  color: #777;
+}
+
+.saved-btn,
+.saved-btn:hover {
+  background: rgb(0, 120, 240);
+  border: solid 1px rgb(0, 120, 240);
+  color: #fff !important;
+}
+/*Buttons end*/
+
+
+/*Donation*/
+.custom-popover {
+  border-radius: 4px;
+  position: relative;
+	display: block;
+	width: 100%;
+	margin-bottom: 20px;
+	max-width: 100%;
+  background: #3a3a3a;
+  color: #fff;
+  border: 0;
+  padding: 10px 5px;
+}
+.custom-popover p {
+  margin-bottom: 0;
+	font-size: 17px;
+  font-family: 'Nunito', sans-serif;
+	text-align: center;
+	font-weight: 500;
+}
+.custom-popover .arrow {
+  margin-left: auto;
+  transition: 0.4s all ease-in-out;
+}
+.custom-popover .arrow:after {
+  border-top-color: #3a3a3a !important;
+}
+.box {
+  border-radius: 0;
+  border: solid 1px gainsboro;
+  box-shadow: 0px 5px 7px -4px gainsboro;
+}
+.box-padd {
+  padding: 20px;
+}
+.box p {
+  font-size: 18px;
+	font-weight: 500;
+	color: #757575;
+}
+.progress {
+  border-radius: 0;
+	border-bottom: solid 1px #dcdcdc;
+	box-shadow: none;
+  margin-bottom: 0;
+}
+.progress .progress-bar {
+  background: rgb(245, 155, 37); 
+  box-shadow: none;
+	/* specific to codepen.io	 */
+	height: 100% !important;
+}
+.amt-input-group-addon {
+  background: rgba(0, 0, 0, 0);
+  padding-right: 0;
+  font-weight: 700;
+  color: #757575;
+  font-size: 20px;
+  padding: 10px;
+}
+.input-group-txt,
+.input-group-txt:hover,
+.input-group-txt:focus {
+  border: 1px solid #ccc;
+	border-left: 0;
+	box-shadow: none;
+	outline: none;
+	font-size: 22px;
+	padding: 10px;
+	height: auto;
+	padding-left: 0;
+	font-family: 'Nunito', sans-serif;
+	font-weight: 600;
+}
+#success {
+  display: none;
+}
+.share-popover {
+  border-radius: 4px;
+  position: relative;
+	display: block;
+	width: 100%;
+	margin-bottom: 20px;
+	max-width: 100%;
+  background: #fff;
+  padding: 10px 5px;
+  margin-top: 20px !important;
+}
+.share-popover .arrow {
+  left: 75% !important;
+}
+/*Donation end*/
+
+
+/* // MEDIA QUERIES //  */
+@media screen and (max-width: 768px) {
+  .col-mgbtm {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .play-game {
+    font-size: 18px; 
+    width: 85%;
+}
+}
+
+@media (max-width: 750px) {
+#page-title {
+    font-size: 30px; 
+    }
+#page-subtitle {
+    font-size: 11px; 
+    }
+#page-subtitle2 {
+    font-size: 11px; 
+}
+#header-image {
+    width: 300px; 
+    }
+.newsletter {
+    font-size: 14px;
+    margin-top: 20px; 
+}
+button {
+    margin-top: 10px; 
+}
+.container-users {
+  width: 90%; 
+}
+.play-game {
+    font-size: 18px; 
+    width: 85%;
+}
+.home {
+  font-size: 12px; 
+  text-align: center; 
+  margin-top: 15px; 
+}
+#together-image {
+  width: 100%; 
+}
+}
+
+@media (max-width: 450px) {
+#page-title {
+    font-size: 25px; 
+    font-weight: 300;
+    }
+#page-subtitle {
+    font-size: 15px; 
+    font-weight: 300;
+    }
+#page-subtitle2 {
+    font-size: 12px; 
+}
+#header-image {
+    width: 300px; 
+    }
+.newsletter {
+    font-size: 14px;
+    margin-top: 10px; 
+}
+button {
+    margin-top: 10px; 
+}
+.container-users {
+  width: 90%; 
+}
+.home {
+  font-size: 11px; 
+  text-align: center; 
+  margin-top: 15px; 
+}
+.play-game {
+  font-size: 16px; 
+    width: 85%;
+}
+}
+/* // END OF MEDIA QUERIES*/
+</style>
+
+</head>
+<body>
+
+  <div class="container">
+    <div id="page-title" data-aos="fade-down">
+        <img src="sj2.jpg" id="header-image" width="350px"><br>
+        <img src="together.svg" id ="together-image" width="550px">
+        <div id="page-subtitle2">By Maya Check</div>
+        <div id="page-subtitle">A safe, fact-checked, and fun place for young people to learn about, share,<br> and understand all the social and political issues they face today and tommorow.</div>
+    </div>
+    </div>
+
+    <br>
+    
+    <div class="rules-reg">
+  RULES AND REGULATIONS 
+</div>
+
+<br>
+    
+<!-- <div class="container-newsletter">
+    <div class="newsletter" data-aos="fade-down">
+      <span>KEEP UP TO DATE WITH ALL UPCOMING EVENTS AND CHARITIES &nbsp;</span>
+      <br>
+      <div class="center hideform">
+        <button id="close" style="float: right;">X</button><br>
+        <form>
+            Email:<br>
+            <input type="text" name="email" value="">
+            <br><br>
+            <input type="submit" value="Submit" id="submit">
+        </form>
+    </div>
+      <button id="show">SIGN UP FOR NEWSLETTER</button>
+    </div>
+    <hr/>
+  </div> -->
+
+<br>
+
+<div class="container-users">
+  <div class="user-posts">
+    USER POSTS <img class="avatar avatar-small" alt="jonrohan" src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png" width="25" height="25"/> &nbsp; <span id="user-signup">SIGN UP</span> OR <span id="user-signin">SIGN IN</span> TO SEE SIMILAR BOARDS<br> 
+ 
+  <div class="user-maya">
+    <span id="user-boards1">Peaceful Protests in Philly</span><br>
+    <span id="user-boards2">Newer Organizations Worth Mentioning</span><br>
+    <span id="user-boards3">Peaceful Protests in New York</span><br>
+    <span id="user-boards4">Active Donations - Color of Change</span><br><br>
+
+    CURRENT BOARD: <span id="user-boards5">Peaceful Protests in Philly </span> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pin" viewBox="0 0 16 16">
+    <path d="M4.146.146A.5.5 0 0 1 4.5 0h7a.5.5 0 0 1 .5.5c0 .68-.342 1.174-.646 1.479-.126.125-.25.224-.354.298v4.431l.078.048c.203.127.476.314.751.555C12.36 7.775 13 8.527 13 9.5a.5.5 0 0 1-.5.5h-4v4.5c0 .276-.224 1.5-.5 1.5s-.5-1.224-.5-1.5V10h-4a.5.5 0 0 1-.5-.5c0-.973.64-1.725 1.17-2.189A5.921 5.921 0 0 1 5 6.708V2.277a2.77 2.77 0 0 1-.354-.298C4.342 1.674 4 1.179 4 .5a.5.5 0 0 1 .146-.354zm1.58 1.408-.002-.001.002.001zm-.002-.001.002.001A.5.5 0 0 1 6 2v5a.5.5 0 0 1-.276.447h-.002l-.012.007-.054.03a4.922 4.922 0 0 0-.827.58c-.318.278-.585.596-.725.936h7.792c-.14-.34-.407-.658-.725-.936a4.915 4.915 0 0 0-.881-.61l-.012-.006h-.002A.5.5 0 0 1 10 7V2a.5.5 0 0 1 .295-.458 1.775 1.775 0 0 0 .351-.271c.08-.08.155-.17.214-.271H5.14c.06.1.133.191.214.271a1.78 1.78 0 0 0 .37.282z"/>
+    </svg> <br><br>
+    <span id="user-sn">MAYA CHECK:</span>Hi Everyone! I'd love to organize a meet up at the Starbucks in KOP to go over some of our peaceful protest ideas. What is your availability this week/weekend @janedoe and @johndoe?<br><br>
+    <span id="user-sn">JANE DOE:</span>Awesome! I'm available this upcoming Saturday between noon and 3pm.<br><br>
+    <span id="user-sn">JOHN DOE:</span> Weekends work better for me. Saturday works at 1pm. Looking forward to discussing our ideas in person!
+  </div>
+  </div>
+</div>
+
+
+  <div class="container" id="container-donation" data-aos="fade-left">
+    <div class="row">
+      <div class="col-md-offset-4 col-sm-offset-3 col-md-4 col-sm-6">
+        <div class="popover top custom-popover">
+          <div class="arrow"></div>
+          <div class="popover-content">
+            <p id="inprogress">
+              $<span id="amount_txt">900</span> still needed for this project
+            </p>
+            <p id="success">
+              Project Fully Funded!
+            </p>
+          </div><!--popover-content-->
+        </div><!--popover end-->
+        <div class="box">
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%;">
+              <span class="sr-only">10% Complete</span>
+            </div><!--progress-bar end-->
+          </div><!--progress end-->
+          <div class="box-padd">
+            <p>
+              <span class="org-txt">Only 8 days</span> left to fund this project.
+            </p>
+            <p>
+              Join the <strong>42</strong> other donors who have already supported the <a href="https://colorofchange.org/" id="foundation-link" >COLOR OF CHANGE</a> charity.
+              <br><br>Every dollar helps.
+            </p>
+            <br>
+            <div class="row">
+              <div class="col-sm-6 col-mgbtm">
+                <div class="input-group">
+                  <span class="input-group-addon amt-input-group-addon">$</span>
+                  <input type="number" class="form-control input-group-txt" id="amount" value="100" min="0">
+                </div>
+              </div><!--col-sm-* end-->
+              <div class="col-sm-6 col-mgbtm">
+                <button class="btn green-btn" id="give">Give Now</button>
+              </div><!--col-sm-* end-->
+            </div><!--row end-->
+          </div><!--box-padd end-->
+        </div><!--box end-->
+        <br>
+        <div class="row">
+          <div class="col-sm-6 col-mgbtm">
+            <button class="btn grey-btn" id="save">Save for later</button>
+          </div><!--col-sm-* end-->
+          <div class="col-sm-6 col-mgbtm">
+            <span class="btn grey-btn share" data-link="https://twitter.com/share?text=Yay, I donated!">Tell your friends</span>
+          </div><!--col-sm-* end-->
+        </div><!--row end-->
+      </div><!--col-md-* end-->
+    </div><!--row end-->
+  </div><!--container end-->
+
+  <br><br><br>
+  
+  <div class="play-game" data-aos="fade-right">
+    PLAY TIC-TAC-TOE TO EARN <br> $ TOWARDS DONATIONS
+</div>
+
+<br>
+
+<div class="container-newsletter">
+  <div class="newsletter" data-aos="fade-down">
+    <span>KEEP UP TO DATE WITH ALL UPCOMING EVENTS AND CHARITIES &nbsp;</span>
+    <br>
+    <div class="center hideform">
+      <button id="close" style="float: right;">X</button><br>
+      <form>
+          Email:<br>
+          <input type="text" name="email" value="">
+          <br><br>
+          <input type="submit" value="Submit" id="submit">
+      </form>
+  </div>
+    <button id="show">SIGN UP FOR NEWSLETTER</button>
+  </div>
+  <hr/>
+</div>
+
+<br>
+
+<footer>
+  <img src="footer.png" width="180px"><br>
+  MAYA CHECK 2021 ALL RIGHTS RESERVED</footer>
+
+    
+ <!-- // JS -->
+ <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+ <script>AOS.init();</script>
+ <script>
+ $('#show').on('click', function () {
+    $('.center').show();
+    $(this).hide();
+})
+
+$('#close').on('click', function () {
+    $('.center').hide();
+    $('#show').show();
+})
+
+$('#submit').on('click', function () {
+    $('.center').hide();
+})
+</script>
+<script>
+    $(document).ready(function($){
+
+// Popover & tooltip initialize
+  $('[data-toggle="popover"]').popover();
+  $('[data-toggle="tooltip"]').tooltip();
+
+
+// set total & needed
+localStorage.setItem('total', 1000);
+localStorage.setItem('needed', 900);
+$('.custom-popover .arrow').css('left', '10%');
+
+
+// Give btn
+$('#give').bind('click', function(){
+  var amount = $('#amount').val();
+  var total = localStorage.getItem('total');
+  var needed = localStorage.getItem('needed') - amount;
+  localStorage.setItem('needed', needed);
+  var width = 100 - (needed/total)*100;
+  // console.log(needed);
+  // console.log(width);
+  if(needed <= 0) {
+    $('#amount_txt').html('0');
+    $('#inprogress').hide();
+    $('#success').show();
+    $('.progress-bar').css('background','#ADCA05');
+    $('.custom-popover .arrow').css('left', '96%');
+    $('.progress-bar').css('width', 100+'%');
+  } else {
+    $('#inprogress').show();
+    $('#success').hide();
+    $('#amount_txt').html(needed);
+    if(width>90) {
+      $('.custom-popover .arrow').css('left', '96%');
+    } else {
+      $('.custom-popover .arrow').css('left', (width)+'%');
+    }
+    $('.progress-bar').css('width', (width)+'%');
+  }
+});
+// Give btn end
+
+
+// share
+$('.share').bind("click",function(e){
+  window.open($(this).attr("data-link"),"yyyyy","width=500,height=500,resizable=no,toolbar=no,menubar=no,location=no,status=no");
+});
+
+
+// save
+$('#save').bind("click",function(e){
+  $(this).addClass('saved-btn');
+  $(this).html('Saved!');
+});
+
+});
+</script>
+<script>
+  // ON CLICK EVENTS 
+$("#user-signup").on('click', function(){
+    window.location = "signup.html";    
+  });
+$("#user-signin").on('click', function(){
+    window.location = "signin.html";    
+});
+$("#user-boards1").on('click', function(){
+    window.location = "signin.html";    
+});
+$("#user-boards2").on('click', function(){
+    window.location = "signin.html";    
+});
+$("#user-boards3").on('click', function(){
+    window.location = "signin.html";    
+});
+$("#user-boards4").on('click', function(){
+    window.location = "signin.html";    
+});
+$("#user-boards5").on('click', function(){
+    window.location = "signin.html";    
+});
+$(".play-game").on('click', function(){
+    window.location = "games.html";    
+});
+$(".rules-reg").on('click', function(){
+    window.location = "rules.html";    
+});
+</script>
+
+</body>
+</html>
